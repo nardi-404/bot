@@ -10,8 +10,7 @@ import random
 # CONFIG
 # ======================
 TOKEN = "PASTE_DISCORD_TOKEN_HERE"
-GROQ_KEY = ""
-
+GROQ_KEY = os.getenv("GROQ_KEY")
 client = OpenAI(
     api_key=GROQ_KEY,
     base_url="https://api.groq.com/openai/v1"
@@ -229,4 +228,4 @@ async def on_ready():
 # ======================
 # RUN
 # ======================
-bot.run("")
+bot.run(os.getenv("DISCORD_TOKEN"))
